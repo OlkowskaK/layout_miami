@@ -10,7 +10,7 @@
     object-fit: cover;
   }
 
-  @media (min-width: 321px) {
+  @media (min-width: 744px) {
     grid-template-columns: repeat(12, 1fr);
 
     &__item {

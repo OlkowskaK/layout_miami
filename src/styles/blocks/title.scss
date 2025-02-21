@@ -26,9 +26,14 @@
     color: #161616;
     padding-top: 0;
 
-    @media (min-width: 321px) {
+    @media (min-width: 600px) {
       font-size: 48px;
       line-height: 48px;
+      padding-left: 72px;
+    }
+
+    @media (min-width: 1260px) {
+      padding-left: 120px;
     }
   }
 
