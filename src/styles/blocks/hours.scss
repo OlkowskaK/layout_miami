@@ -4,7 +4,7 @@
     gap: 20px;
     grid-template-columns: 1fr;
 
-    @media (min-width: 321px) {
+    @media (min-width: 600px) {
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -12,13 +12,13 @@
   &__text {
     padding-top: 40px;
 
-    @media (min-width: 321px) {
+    @media (min-width: 600px) {
       padding-top: 118px;
       padding-left: 52px;
       padding-right: 24px;
     }
 
-    @media (min-width: 745px) {
+    @media (min-width: 1260px) {
       padding-left: 100px;
     }
   }
@@ -28,7 +28,11 @@
     flex-direction: column;
     gap: 40px;
 
-    @media (min-width: 321px) {
+    @media (min-width: 600px) {
+      padding-top: 138px;
+    }
+
+    @media (min-width: 1260px) {
       padding-top: 140px;
     }
   }

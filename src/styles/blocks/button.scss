@@ -1,0 +1,18 @@
+.button {
+  width: 280;
+  height: 56;
+  background-color: #d12d35;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  &__exhibitions {
+    text-decoration: none;
+    color: #fff;
+    font-family: Cinzel, serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+  }
+}
