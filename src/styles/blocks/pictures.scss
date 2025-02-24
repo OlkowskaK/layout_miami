@@ -1,7 +1,11 @@
 .pictures {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  gap: 24px;
+  gap: 20px;
+
+  &__three {
+    gap: 8px;
+  }
 
   &__item {
     width: 100%;
@@ -12,6 +16,7 @@
 
   @media (min-width: 744px) {
     grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
 
     &__item {
       grid-column: span 8;
@@ -26,7 +31,28 @@
     }
 
     &__item--three {
+      grid-column: span 6;
+    }
+
+    &__item--three:last-of-type {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1260px) {
+    &__item--three {
       grid-column: span 4;
     }
+    &__item--three:last-of-type {
+      display: block;
+    }
+  }
+
+  &__item--first {
+    object-position: 30% center;
+  }
+
+  &__item--last {
+    object-position: 100% center;
   }
 }

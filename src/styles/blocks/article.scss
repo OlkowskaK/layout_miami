@@ -1,4 +1,6 @@
 .article {
+  padding-bottom: 48px;
+
   &__paragraph {
     font-family: Cinzel, serif;
     font-weight: 400;
@@ -6,7 +8,6 @@
     line-height: 27px;
     color: #161616;
     padding-top: 24px;
-    padding-bottom: 48px;
   }
 
   &__red {
@@ -16,8 +17,8 @@
     line-height: 27px;
     color: #d12d35;
   }
-}
 
-.article__paragraph:last-child {
-  padding-bottom: 40px;
+  &:last-of-type {
+    padding-bottom: 40px;
+  }
 }
