@@ -63,7 +63,10 @@
   }
 
   &__item--first {
-    object-position: 30% center;
+    object-position: 18% center;
+    transform: scale(1.5);
+    transform-origin: 50% 50%;
+    clip-path: inset(17% 17% 17% 17%);
   }
 
   &__item--last {

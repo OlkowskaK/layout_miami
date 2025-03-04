@@ -1,0 +1,90 @@
+.article {
+  &__contact {
+    padding-top: 48px;
+
+    &--title {
+      font-family: Cinzel, serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 27px;
+      color: #161616;
+
+      padding-bottom: 16px;
+    }
+
+    &--item {
+      padding-bottom: 8px;
+    }
+
+    &--label {
+      font-family: Cinzel, serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 27px;
+      color: #161616;
+
+      padding-bottom: 4px;
+    }
+
+    &--infophone {
+      font-family: Cinzel, serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 27px;
+
+      color: #3e3e3e;
+    }
+
+    &--infoaddress {
+      font-family: Cinzel, serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+
+      color: #3e3e3e;
+    }
+  }
+
+  &__form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 48px;
+
+    & > *:nth-last-child(2) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__form-label {
+    display: none;
+  }
+
+  &__form-input {
+    width: 280px;
+    height: 48px;
+    background-color: #f8f8fa;
+    border: none;
+
+    &::placeholder {
+      font-family: Cinzel, serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__form-textarea {
+    width: 280px;
+    height: 144px;
+    background-color: #f8f8fa;
+    border: none;
+
+    &::placeholder {
+      font-family: Cinzel, serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
