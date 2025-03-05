@@ -42,3 +42,27 @@
 .button__exhibitions:default {
   background-color: #d12d35;
 }
+
+.button__exhibitions--form {
+  width: 280px;
+
+  @media (min-width: 744px) {
+    width: 288px;
+  }
+
+  @media (min-width: 1260px) {
+    width: 411px;
+  }
+}
+
+.button.button__form {
+  width: 280px;
+
+  @media (min-width: 744px) {
+    width: 288px;
+  }
+
+  @media (min-width: 1260px) {
+    width: 411px;
+  }
+}

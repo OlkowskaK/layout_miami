@@ -60,12 +60,19 @@
     padding-top: 100px;
     color: #161616;
 
-    @media (min-width: 600px) {
+    @media (min-width: 744px) {
+      font-family: Cinzel, serif;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 48px;
+      letter-spacing: -1.5px;
+      text-align: center;
+
       padding-top: 140px;
     }
   }
   &--explore {
-    @media (min-width: 600px) {
+    @media (min-width: 744px) {
       padding: 140px 104px 0;
     }
   }
