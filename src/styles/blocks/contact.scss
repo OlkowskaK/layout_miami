@@ -45,7 +45,6 @@
       font-size: 16px;
       line-height: 27px;
       color: #161616;
-
       padding-bottom: 16px;
     }
 
@@ -59,25 +58,15 @@
       font-size: 14px;
       line-height: 27px;
       color: #161616;
-
       padding-bottom: 4px;
     }
 
-    &--infophone {
-      font-family: Cinzel, serif;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 27px;
-
-      color: #3e3e3e;
-    }
-
+    &--infophone,
     &--infoaddress {
       font-family: Cinzel, serif;
       font-weight: 700;
       font-size: 16px;
-      line-height: 22px;
-
+      line-height: 27px;
       color: #3e3e3e;
     }
   }
@@ -98,12 +87,19 @@
     display: none;
   }
 
-  &__form-input {
+  &__form-input,
+  &__form-textarea {
     width: 280px;
-    height: 48px;
     background-color: #f8f8fa;
-    border: none;
-    padding: 0;
+    border: 1px solid transparent;
+    color: #161616;
+    font-family: Cinzel, serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 14px 11px;
+    box-sizing: border-box;
+    text-align: left;
 
     @media (min-width: 744px) {
       width: 288px;
@@ -114,35 +110,31 @@
     }
 
     &::placeholder {
-      font-family: Cinzel, serif;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 20px;
-      padding: 14px 11px;
+      color: #7e7e83;
+      direction: rtl;
+      text-align: left;
+    }
+
+    &:hover {
+      border: 1px solid #d5d7de;
+
+      &::placeholder {
+        color: #161616;
+      }
+    }
+
+    &:focus {
+      border: 1px solid #161616;
+      outline: none;
+    }
+
+    &:focus::placeholder {
+      color: #161616;
     }
   }
 
   &__form-textarea {
-    width: 280px;
     height: 144px;
-    background-color: #f8f8fa;
-    border: none;
-    padding: 0;
-
-    @media (min-width: 744px) {
-      width: 288px;
-    }
-
-    @media (min-width: 1260px) {
-      width: 411px;
-    }
-
-    &::placeholder {
-      font-family: Cinzel, serif;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 20px;
-      padding: 14px 11px;
-    }
+    resize: none;
   }
 }
