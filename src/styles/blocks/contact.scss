@@ -68,6 +68,11 @@
       font-size: 16px;
       line-height: 27px;
       color: #3e3e3e;
+      text-decoration: none;
+
+      &:hover {
+        color: #d12d35;
+      }
     }
   }
 
@@ -85,6 +90,11 @@
 
   &__form-label {
     display: none;
+  }
+
+  &__form-textarea {
+    height: 144px;
+    resize: none;
   }
 
   &__form-input,
@@ -111,7 +121,6 @@
 
     &::placeholder {
       color: #7e7e83;
-      direction: rtl;
       text-align: left;
     }
 
@@ -131,10 +140,5 @@
     &:focus::placeholder {
       color: #161616;
     }
-  }
-
-  &__form-textarea {
-    height: 144px;
-    resize: none;
   }
 }
