@@ -14,7 +14,7 @@
     transition: transform 0.3s ease-in-out;
 
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
 
     &--online {
@@ -78,7 +78,7 @@
     clip-path: inset(17% 17% 17% 17%);
 
     &:hover {
-      transform: scale(1.5) scale(1.2);
+      transform: scale(1.5) scale(1.1);
     }
   }
 

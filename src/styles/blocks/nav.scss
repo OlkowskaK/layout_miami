@@ -20,6 +20,7 @@
     display: flex;
     gap: 24px;
     padding-top: 36px;
+    position: relative;
 
     @media (min-width: 744px) {
       padding-top: 66px;
@@ -31,7 +32,53 @@
       gap: 55px;
     }
 
+    &--hover {
+      position: absolute;
+      width: 201px;
+      top: -20px;
+      left: -135px;
+
+      opacity: 0;
+      visibility: hidden;
+
+      font-family: Cinzel, serif;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 20px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      color: #fff;
+
+      transition:
+        opacity 0.3s ease-in-out,
+        visibility 0.3s ease-in-out;
+
+      @media (min-width: 400) {
+        top: -20px;
+        left: -217px;
+        font-size: 16px;
+        line-height: 27px;
+      }
+
+      a.nav__right--number {
+        font-family: Cinzel, serif;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 20px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+
+        @media (min-width: 400) {
+          font-size: 16px;
+          line-height: 27px;
+        }
+      }
+    }
+
     &--icon {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -42,8 +89,14 @@
         width: 32px;
         height: 32px;
       }
+
+      &:hover .nav__right--hover {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
+
   &__phone {
     width: 18px;
     height: 18px;
