@@ -120,4 +120,16 @@
       height: 16px;
     }
   }
+
+  &__close {
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin: auto;
+
+    @media (min-width: 1260px) {
+      width: 21px;
+      height: 21px;
+    }
+  }
 }
