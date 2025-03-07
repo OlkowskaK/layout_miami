@@ -480,6 +480,21 @@
               console.log('Formularz został wysłany!');
             });
         </script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const menuSection = document.querySelector('.menu__section');
+            const menuIcon = document.querySelector('.nav__menu');
+            const menuClose = document.querySelector('.nav__close');
+
+            menuIcon.addEventListener('click', () => {
+              menuSection.classList.add('active');
+            });
+
+            menuClose.addEventListener('click', () => {
+              menuSection.classList.remove('active');
+            });
+          });
+        </script>
       </section>
     </main>
     <footer class="footer"></footer>
