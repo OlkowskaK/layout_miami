@@ -30,13 +30,18 @@
     ></script>
   </head>
   <body>
-    <header class="header">
+    <header
+      class="header"
+      id="header"
+    >
       <nav class="nav">
-        <img
-          class="nav__logo"
-          src="../public/images/logo.png"
-          alt="logo"
-        />
+        <a href="#header">
+          <img
+            class="nav__logo"
+            src="../public/images/logo.png"
+            alt="logo"
+          />
+        </a>
 
         <div class="nav__right">
           <div class="nav__right--icon">
@@ -82,7 +87,7 @@
       <section class="menu__section">
         <nav class="nav">
           <img
-            class="nav__logo"
+            class="nav__logo nav__logo--menu"
             src="../public/images/logo.png"
             alt="logo"
           />
@@ -101,7 +106,7 @@
           <ul class="links__list">
             <li class="links__item">
               <a
-                href="#"
+                href="#header"
                 class="links__link"
               >
                 Home
@@ -109,7 +114,7 @@
             </li>
             <li class="links__item">
               <a
-                href="#"
+                href="#hours"
                 class="links__link"
               >
                 About Us
@@ -117,7 +122,7 @@
             </li>
             <li class="links__item">
               <a
-                href="#"
+                href="#nowonview"
                 class="links__link"
               >
                 Now on view
@@ -125,7 +130,7 @@
             </li>
             <li class="links__item">
               <a
-                href="#"
+                href="#exploreonline"
                 class="links__link"
               >
                 Explore Online
@@ -133,7 +138,7 @@
             </li>
             <li class="links__item">
               <a
-                href="#"
+                href="#contacts"
                 class="links__link"
               >
                 Contacts
@@ -142,7 +147,10 @@
           </ul>
         </nav>
 
-        <div class="menu__contacts">
+        <div
+          class="menu__contacts"
+          id="hours"
+        >
           <p class="menu__contact--item">The Met Fifth Avenue</p>
           <a
             href="tel:+12125357710"
@@ -225,7 +233,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="nowonview">
         <h2 class="title title--section">Now On View</h2>
         <p class="title__center">
           Explore exhibition gallery guides, videos, articles, and more.
@@ -300,7 +308,7 @@
           <button class="button__exhibitions">View all exhibitions</button>
         </div>
       </section>
-      <section>
+      <section id="exploreonline">
         <h2 class="title title--section title--explore">
           More to Explore Online
         </h2>
@@ -351,7 +359,7 @@
           </div>
         </article>
       </section>
-      <section>
+      <section id="contacts">
         <h2 class="title title--section">Contact us</h2>
         <article class="article article__section">
           <div class="article__cos">
@@ -484,14 +492,36 @@
           document.addEventListener('DOMContentLoaded', function () {
             const menuSection = document.querySelector('.menu__section');
             const menuIcon = document.querySelector('.nav__menu');
+            const menuLogo = document.querySelector('.nav__logo--menu');
             const menuClose = document.querySelector('.nav__close');
+            const menuLinks = document.querySelectorAll('.links__link');
 
             menuIcon.addEventListener('click', () => {
               menuSection.classList.add('active');
             });
 
-            menuClose.addEventListener('click', () => {
+            function closeMenu() {
               menuSection.classList.remove('active');
+            }
+
+            function scrollToAnchor(event) {
+              event.preventDefault();
+              const targetId = event.target.getAttribute('href').substring(1);
+              const targetElement = document.getElementById(targetId);
+
+              if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+              }
+
+              closeMenu();
+            }
+
+            menuClose.addEventListener('click', closeMenu);
+
+            menuLogo.addEventListener('click', closeMenu);
+
+            menuLinks.forEach((link) => {
+              link.addEventListener('click', scrollToAnchor);
             });
           });
         </script>
